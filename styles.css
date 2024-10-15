@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#spreadsheet {
+    display: grid;
+    grid-template-columns: 50px repeat(26, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.rows {
+    display: contents;
+}
+
+.extra, .cell {
+    width: 100px;
+    height: 25px;
+    border: 0.1px solid rgb(181, 181, 181);
+    cursor: cell;
+}
+.cell {
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 2px;
+    z-index: 1;
+
+    &:focus-within {
+        overflow: visible;
+    }
+}
+
+#filler {
+    background-color: rgb(75, 75, 75);
+    border: none;
+}
+
+.col-header {
+    background-color: rgb(181, 181, 181);
+    text-align: center;
+    border: 0.1px solid rgba(0, 0, 0, 0.439);
+    position: sticky;
+    top: 0;
+    cursor: default;
+    z-index: 3;
+}
+
+.row-header {
+    height: 25px;
+    background-color: rgb(181, 181, 181);
+    text-align: center;
+    border: 0.1px solid rgba(0, 0, 0, 0.439);
+    position: sticky;
+    left: 0;
+    cursor: default;
+    z-index: 2;
+}
+
+.cell-focus {
+    outline: none;
+}
+
+.selected-cell {
+    border: 2px solid rgb(4, 114, 114);
+}
+
+header {
+    background-color: rgb(186, 194, 235);
+}
+
+input {
+    outline: none;
+    border: 2px solid black;
+    border-radius: 50px;
+    width: 25px;
+    cursor: pointer;
+}
+
+select {
+    width: 70%;
+}
+
+button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+img {
+    width: 20px;
+}
+
+#toolbar {
+    padding-inline: 5px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    height: 15vh;
+}
+
+.sub {
+    background-color: white;
+    width: 17%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    border: 2px double rgba(2, 34, 90, 0.566);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.subx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
