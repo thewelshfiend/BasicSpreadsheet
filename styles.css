@@ -22,7 +22,7 @@
 .cell {
     overflow: hidden;
     white-space: nowrap;
-    padding-top: 2px;
+    padding-top: 1px;
     z-index: 1;
 
     &:focus-within {
@@ -68,7 +68,7 @@ header {
     background-color: rgb(186, 194, 235);
 }
 
-input {
+input[type="color"] {
     outline: none;
     border: 2px solid black;
     border-radius: 50px;
@@ -86,8 +86,17 @@ button {
     cursor: pointer;
 }
 
-img {
+.fs-btn, .zoom-btn {
     width: 20px;
+}
+
+#find-replace-btn {
+    width: 20px;
+    padding-bottom: 5px;
+}
+
+.find-replace-fields {
+    outline: none;
 }
 
 #toolbar {

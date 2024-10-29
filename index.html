@@ -49,11 +49,11 @@
                 <!-- Font style -->
                 <div class="subx">
                     <span>Style:</span>
-                    <button id="bold" onclick="makeBold()"><img
+                    <button id="bold" onclick="makeBold()"><img class="fs-btn"
                             src="https://www.svgrepo.com/show/286915/bold-letter-b.svg" alt=""></button>
-                    <button id="italic" onclick="makeItalic()"><img
+                    <button id="italic" onclick="makeItalic()"><img class="fs-btn"
                             src="https://www.svgrepo.com/show/286909/italic-ui.svg" alt=""></button>
-                    <button id="underline" onclick="makeUnderline()"><img
+                    <button id="underline" onclick="makeUnderline()"><img class="fs-btn"
                             src="https://www.svgrepo.com/show/286910/underline-ui.svg" alt=""></button>
                 </div>
             </div>
@@ -69,13 +69,26 @@
                 </div>
             </div>
             <!-- Zoom -->
-            <!-- <div class="sub">
-                <span id="zoom">
-                    <button id="increase">+</button>
+            <div class="sub">
+                    <button id="increase"><img class="zoom-btn"
+                        src="https://www.svgrepo.com/show/522234/plus.svg" alt=""></button>
                     <span id="z-text">Zoom</span>
-                    <button id="decrease">-</button>
-                </span>
-            </div> -->
+                    <button id="decrease"><img class="zoom-btn"
+                        src="https://www.svgrepo.com/show/522184/minus.svg" alt=""></button>
+            </div>
+            <!-- Find & Replace -->
+            <div class="sub">
+                <div>
+                    <label for="find">Find:</label>
+                    <input class="find-replace-fields" id="find" type="text">
+                </div>
+                <div>
+                    <label for="replace">Replace:</label>
+                    <input class="find-replace-fields" id="replace" type="text">
+                    <button id="replaceBtn"><img id="find-replace-btn"
+                        src="https://www.svgrepo.com/show/443796/gui-findnreplace.svg" alt=""></button>
+                </div>
+            </div>
         </div>
     </header>
     <main>

@@ -131,6 +131,11 @@ function makeUnderline()
 const allCells = container.querySelectorAll('.cell');
 const txtColor = document.getElementById('text');
 const bgColor = document.getElementById('bg');
+
+const find = document.getElementById('find');
+const replace = document.getElementById('replace');
+const replaceBtn = document.getElementById('replaceBtn');
+let foundArr = [];
 function changeTxtColor()
 {
     if(selectedCells.size == 0)
@@ -224,3 +229,47 @@ document.addEventListener('keydown', (e) => {
 //     //     grid-template-rows: repeat(20, px);
 //     // `;
 // })
+
+find.addEventListener('change', (e) => {
+    const val = e.target.value;
+
+    selectedCells.forEach((cell) => {
+        cell.classList.remove('selected-cell');
+    });
+    selectedCells.clear();
+
+    for(let i in allCells)
+    {
+        try
+        {
+            if(allCells[i].innerText.includes(val))
+            {
+                allCells[i].classList.add('selected-cell');
+                selectedCells.add(allCells[i]);
+                foundArr.push(allCells[i]);
+            }
+        }
+        catch
+        {
+            continue;
+        }
+    }
+    foundArr.forEach((cell) => {
+        cell.classList.add('selected-cell');
+    })
+})
+
+replaceBtn.addEventListener('click', () => {
+    foundArr.forEach((cell) => {
+        cell.innerText = cell.innerText.replaceAll(find.value, replace.value);
+    });
+
+    selectedCells.forEach((cell) => {
+        cell.classList.remove('selected-cell');
+    });
+    selectedCells.clear();
+
+    foundArr = [];
+    find.value = '';
+    replace.value = '';
+})
