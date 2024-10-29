@@ -210,3 +210,17 @@ document.addEventListener('keydown', (e) => {
         clearSelection();
     }
 })
+
+// const plusSize = document.getElementById('increase');
+// const minusSize = document.getElementById('decrease');
+
+// plusSize.addEventListener('click', () => {
+//     const init_Width = allCells[0].style.width;
+//     const init_Height = allCells[0].style.height;
+//     console.log()
+
+//     // container.style.cssText = `
+//     //     grid-template-columns: 50px repeat(26, 1fr);
+//     //     grid-template-rows: repeat(20, px);
+//     // `;
+// })
